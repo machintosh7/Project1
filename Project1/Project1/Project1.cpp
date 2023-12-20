@@ -20,11 +20,9 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    // Utilisez le processHandle comme nécessaire, par exemple pour appeler inject(processHandle).
     std::cout << "Process Handle Found : " << processHandle << std::endl;
 
     inject(processHandle, dllPath);
-    // N'oubliez pas de fermer le handle lorsque vous avez terminé avec le processus.
     CloseHandle(processHandle);
 
     return 0;
